@@ -1,0 +1,21 @@
+.second{
+height:30px;
+width:auto;
+background-color:violet;
+border:solid 1px black;
+}
+#left{
+height:190px;
+width:1005px;
+background-color:yellow; 
+border:solid 1px black;
+}
+.right{
+height:190px;
+width:250px;
+background-color:violet;
+border:solid 1px black;
+}
+h2,h4,h3{
+color:red;
+}
