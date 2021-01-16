@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>string and math functions</title>
+<script>
+function len()
+{
+var str=document.getElementById("txt1").value;
+alert("Length= "+str.length);
+}
+
+function search()
+{
+var str=document.getElementById("txt1").value;
+var pos=document.getElementById("txt2").value;
+var s=str.search(pos);
+alert("searched item is "+s);
+}
+
+function slice ()
+{
+var str=document.getElementById("txt1").value;
+var a=document.getElementById("txt3").value;
+var b=document.getElementById("txt4").value;
+var c=str.slice(a,b);
+alert("String after slicing "+c);
+}
+
+function substring()
+{
+var str=document.getElementById("txt1").value;
+var a=document.getElementById("txt5").value;
+var b=document.getElementById("txt6").value;
+var c=str.substring(a,b);
+alert("Substring="+c);
+}
+
+function trim()
+{
+var str=document.getElementById("txt1").value;
+alert("String without space  "+str.trim());
+}
+
+function upper()
+{
+var str=document.getElementById("txt1").value;
+alert(str.toUpperCase());
+}
+
+function lower()
+{
+var str=document.getElementById("txt1").value;
+alert(str.toLowerCase());
+}
+
+
+function square()
+{
+var i=document.getElementById("txt7").value;
+var sq=Math.sqrt(i);
+alert("Square root="+sq);
+}
+
+function power()
+{
+var i=document.getElementById("txt7").value;
+var j=Math.pow(i,i);
+alert("Power="+j);
+}
+
+function absolute()
+{
+var i=document.getElementById("txt7").value;
+var k=Math.abs(i);
+alert("Absolute value="+k);
+}
+
+function rand()
+{
+alert("Random value"+Math.random());
+}
+
+function rounded()
+{
+var i=document.getElementById("txt7").value;
+var l=Math.round(i);
+alert("Rounded value"+l);
+}
+
+function ceilval()
+{
+var i=document.getElementById("txt7").value;
+alert("ceil value"+Math.ceil(i));
+}
+
+function floorval()
+{
+var i=document.getElementById("txt7").value;
+alert("Floor value"+Math.floor(i));
+}
+
+function sinval()
+{
+var i=document.getElementById("txt7").value;
+alert("Sin value"+Math.sin(i));
+}
+</script>
+
+</head>
+<body>
+-<h2>STRING FUNCTIONS</h2>
+<table >
+       <tr>
+           <th><h3>Enter a string</h3></th>
+            <td><input id="txt1" type="text"></td>
+       </tr>
+       <tr>
+            <th><h3>Enter the searched string</h3></th>
+             <td><input id="txt2" type="text"></td>
+        </tr>
+         <tr>
+             <th><h3>Slicing:Start value</h3></th>
+            <td><input id="txt3" type="text" maxlength="3" size="6"></td>
+            <th><h3>End value</h3></th>
+            <td><input id="txt4" type="text" maxlength="3" size="6"></td>
+      </tr>
+      <tr>
+            <th><h3>Substring:Start value</h3></th>
+            <td><input id="txt5" type="text" maxlength="3" size="6"></td>
+            <th><h3>End value</h3></th>
+            <td><input id="txt6" type="text" maxlength="3" size="6"></td>
+      </tr>
+      <tr > 
+           <th ><input type="button" value="click me!" onClick="len(),search(),slice(),substring(),trim(),upper(),lower()"></td>
+      </tr>
+      </table>
+        <br><br><h2>MATH FUNCTIONS</h2>
+<table>
+    <tr><th>    <h3>Enter a number</h3></th>
+     <td>  <input type="text" id="txt7"></td>
+     <tr><td>  <input type="button" value="Result" onClick="square(),power(),absolute(),rand(),rounded(),ceilval(),floorval(),sinval()"></td></tr>
+</table>
+</body>
+</html>
+
+
