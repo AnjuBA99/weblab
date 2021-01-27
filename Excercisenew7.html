@@ -1,0 +1,39 @@
+<html> 
+<head> <title>Calender</title>
+</head>
+<body>
+<p id="calc"></p>
+<script>
+function calen()
+{
+
+var year=document.getElementById("yr").value;
+var month=document.getElementById("mth").value;
+var m=month-1;
+var d="<table BORDER='1'><tr> <th>SUNDAY</th><th>MONDAY</th><th>TUESDAY</th><th>WEDNESDAY</th><th>THURSDAY</th><th>FRIDAY</th><th>SATURDAY</th></tr><tr>";
+
+var c=new Date(year,m);
+var day=c.getDay();
+for(var i=0;i<day;i++)
+{
+d+="<td></td>";
+}
+while(c.getMonth()==m)
+{
+d+="<td>"+c.getDate()+"</td>";
+if(c.getDay()%7==6)
+{
+d+="</tr><tr>";
+}
+c.setDate(c.getDate()+1);
+}
+d+="</table>";
+document.getElementById("calc").innerHTML=d;
+}
+</script>
+<h2>Display calender</h2>
+Enter a year<input type="text" id="yr"><br><br><br>
+Enter a month<input type="text" id="mth"><br><br><br>
+<input type="button"  value="generate calender" onClick="calen()">
+</body>
+</html>
