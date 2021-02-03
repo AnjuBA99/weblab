@@ -1,0 +1,81 @@
+<html>
+   <head>
+      <title>Registration form</title>
+  
+     <style>
+    table
+      {
+      background-color:cyan;
+      height:60%;
+      width:40%;
+      border:1px solid black;
+      text-align:center;
+      }
+     body
+     {
+     background-color:blue;
+     }
+     </style>
+        
+
+       <script>
+        function validateForm()
+          {
+            var name=document.myform.name.value;
+            var password=document.myform.password.value;
+            var phone=document.myform.phone.value;
+
+               if (name==null||name="")
+                {
+                 alert("Name must be filled");
+                  return false;
+                 }
+                if (password.length<6)
+                 {
+                  alert("Password must be 6 characters long");
+                 return false;
+                 }
+               
+
+               if (phone==null||phone=="") 
+                {
+                 alert("Please enter a phone number");
+                 return false;
+                }
+              else if(isNaN(phone))
+               {
+                alert("Enter numbers between 0-9");
+                return false;
+               } 
+              else if(phone.length!=10)
+              {
+               alert("Enter a 10 digit phone number");
+               return false;
+               }
+             }
+           function validateEmail()
+          {
+            var email=document.myform.email.value;
+            
+            var at=email.indexOf("@");
+            var dot=email.lastIndexOf(".");
+              if(email==""||email==null||at<1||dot<at+2||dot+2>=email.length)
+                {
+                 alert("Please enter valid a mail address ");
+                 return false;
+           }
+          }
+               </script>
+             
+           </head>
+                   <body>
+                <h2> REGISTRATION FORM</h2>
+                <table>
+                    <form  name="myform" onsubmit="return validateForm(),validateEmail()"  method="post">
+                      <tr><th align="left">NAME</th><td><input  name="name" type="text" id="txt1"></td></tr>
+                      <tr><th align="left">PASSWORD:</th><td><input name="password" type="password" id="txt2"></td></tr>
+                      <tr><th align="left">EMAIL:</th><td><input name="email" type="email" id="txt3"></td></tr>
+                      <tr><th align="left">PHONE NUMBER:</th><td><input name="phone" type="text" id="txt4"></td></tr>
+                      <tr><th><input type="submit" ></th></tr></form></table>
+                 </body>
+               </html>
