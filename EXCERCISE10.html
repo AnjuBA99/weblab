@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>image</title>
+</head>
+<style>
+body
+{
+background-color:lightblue;
+</style>
+
+<body>
+<img src="download.jpg" height="360" width="460" align="center" id="im">
+
+<p id="img">Hello</p>
+<script>
+document.getElementById("im").addEventListener("mouseout",myfunction1);
+document.getElementById("im").addEventListener("mouseover",myfunction2);
+function myfunction1()
+{
+document.getElementById("im").src="images.jpg";
+}
+function myfunction2()
+{
+document.getElementById("im").src="download.jpg";
+}
+document.getElementById("img").addEventListener("mouseout",myfunctiontext1);
+document.getElementById("img").addEventListener("mouseover",myfunctiontext2);
+function myfunctiontext1()
+{
+document.getElementById("img").innerHTML="Add event listener";
+}
+function myfunctiontext2()
+{
+document.getElementById("img").innerHTML=
+"Add event listener attaches event";
+}
+
+
+</script>
+
+</body>
+</html>
